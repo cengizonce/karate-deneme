@@ -1,13 +1,23 @@
 package runner;
 
 
-import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
+import org.junit.Test;
 
-class UsersTest {
 
-    @Karate.Test
-    Karate testUi() {
-        return Karate.run("");
+import static org.junit.Assert.assertTrue;
+
+public class UsersTest {
+
+    @Test
+    public void testParallel() {
+        Results results = Runner
+                //  .path("classpath:runner/a")
+                .path("classpath:features")
+                .parallel(5);
+        assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
+
     }
 
 }
