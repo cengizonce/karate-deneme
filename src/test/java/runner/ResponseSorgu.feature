@@ -5,3 +5,9 @@ Feature: Response Sorgu Senaryolari
     When method get
     Then print response
     Then status 200
+
+  Scenario: Servis Ayakta mi?333
+    Given url 'https://postman-echo.com/get'
+    When method get
+    Then print response
+    Then status 200
