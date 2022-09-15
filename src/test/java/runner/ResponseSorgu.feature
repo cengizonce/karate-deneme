@@ -1,8 +1,7 @@
 Feature: Response Sorgu Senaryolari
 
-  Scenario: Response de dönen değer doğru mu?
+  Scenario: Servis Ayakta mi?22
     Given url 'https://postman-echo.com/get'
     When method get
     Then print response
     Then status 200
-    And match response == {id: '#notnull', name: 'vivek'}
