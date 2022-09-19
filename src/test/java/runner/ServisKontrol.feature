@@ -14,6 +14,12 @@ Feature: OpsiyonServis
     Then print response
     Then status 200
 
+  Scenario: Servis Ayakta mi?12313121
+    Given url 'https://postman-echo.com/get'
+    When method get
+    Then print response
+    Then status 200
+
   Scenario: Servis dogru mu?
     Given url 'https://postman-echo.com/get'
     When method get
